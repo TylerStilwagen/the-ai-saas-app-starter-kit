@@ -19,7 +19,7 @@ export default async function PremiumContentPage() {
     redirect("/auth/signin");
   }
 
-  const { hasAccess, subscription } = await checkUserAccess(session.user.id);
+  const { hasAccess } = await checkUserAccess(session.user.id);
 
   if (!hasAccess) {
     return (
